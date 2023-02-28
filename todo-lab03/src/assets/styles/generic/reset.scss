@@ -1,0 +1,11 @@
+::-moz-selection {
+    background: var(--neutral-dark);
+    color: var(--theme-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--neutral-dark);
+    color: var(--theme-color);
+    text-shadow: none;
+}
