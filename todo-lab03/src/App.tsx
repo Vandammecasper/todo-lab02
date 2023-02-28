@@ -1,5 +1,19 @@
+import { AppHeader } from "./components/AppHeader"
+import AddTodo from "./components/AddTodo"
+import TodoItem from "./components/TodoItem"
+import AppFooter from "./components/AppFooter"
+
 function App() {
-  return ( <h1>welcome to todo</h1>
+  return ( 
+    <>
+  <AppHeader />
+
+  <AddTodo/>
+
+  <TodoItem/>
+
+  <AppFooter/>
+  </>
   )
 }
 
