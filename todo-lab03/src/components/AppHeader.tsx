@@ -13,9 +13,9 @@ export const AppHeader = () => {
         return `you have ${todoCount} todos. Get a move on!`
     }
   return (
-    <header>
+    <header className="c-header">
       <h1>Hello {user},</h1>
-      <h3>{printAmountTodos()}</h3>
+      <h5>{printAmountTodos()}</h5>
     </header>
   )
 }

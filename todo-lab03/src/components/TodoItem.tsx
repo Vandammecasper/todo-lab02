@@ -1,9 +1,13 @@
-export default () => {
+import '../assets/styles/components/todo-item.scss'
+import {ITodo} from '../interfaces/ITodo'
+
+export default ({todo}: {todo: ITodo}) => {
     // description, category, isDone, id
     return (
-        <li>
-            <input type="checkbox" />
-            <p>Todo: vissen water geven</p>
+        <li className='c-todo-item'>
+            <input type="checkbox" checked={todo.isDone} />
+            <label htmlFor="">{todo.name}</label>
+            <p>{todo.category}</p>
         </li>
     )
     }
