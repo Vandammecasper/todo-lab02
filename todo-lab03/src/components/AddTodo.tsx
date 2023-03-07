@@ -19,9 +19,9 @@ export default ({handleNewTodo}:{handleNewTodo : Function}) => {
 
     const addTodo = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        if (!newTodo.name || !newTodo.category) return// todo: show warning message
-        (
-        )
+        // if (!newTodo.name || !newTodo.category) return// todo: show warning message
+        // (
+        // )
         handleNewTodo(newTodo)
         console.log('add todo', newTodo)
         emptyTodo()

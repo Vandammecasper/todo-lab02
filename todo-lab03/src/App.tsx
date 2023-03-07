@@ -17,17 +17,7 @@ function App() {
     setTodos([...todos, t])
   }
   return ( 
-    <div className="o-container">
-  <AppHeader />
-
-  <AddTodo handleNewTodo = {addNewTodo}/>
-
-  <ul>
-    {todos.map((todo:ITodo) => (<TodoItem todo={todo} key={todo.name}/>))}
-  </ul>  
-
-  <AppFooter/>
-  </div>
+    
   )
 }
 
