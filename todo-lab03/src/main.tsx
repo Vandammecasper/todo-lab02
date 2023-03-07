@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App'
 
-import './assets/styles/screen.scss'
+import './assets/tailwind.css'
 import AppFooter from './components/AppFooter';
 import { AppHeader } from './components/AppHeader';
 import Dashboard from './routes/Dashboard';
