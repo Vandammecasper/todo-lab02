@@ -1,22 +1,37 @@
-import { useState } from "react"
+import { Link } from 'lucide-react';
+import { useState } from 'react'
 
-export const AppHeader = () => {
-    const [user, setUser] = useState('Casper')
+import '../assets/styles/components/header.scss'
+import Settings from '../routes/Settings';
+
+export default () => {
+    const [user, setUser] = useState('Marty')
     const [todoCount, setTodoCount] = useState(14)
 
     const printAmountTodos = () => {
         if (todoCount === 0) {
-            return 'no todos'
+            return 'Good job, no todos!'
         } else if (todoCount === 1) {
-            return 'you have 1 todo. Better start doing it!'
+            return 'You have 1 todo. Better start doing it!'
+        } else if (todoCount > 100) {
+            return `You have ${todoCount} todos, that's a lot of todos!`
         }
-        return `you have ${todoCount} todos. Get a move on!`
+
+        return `You have ${todoCount} todos. Keep up the good work!`
     }
+        
+
   return (
-    <header className="c-header">
-      <h1>Hello {user},</h1>
-      <h5>{printAmountTodos()}</h5>
+    <header className="flex items-center justify-between py-12">
+      <div>
+        <h1 className='text-4xl font-bold tracking-wide'>Hello, {user}</h1>
+      <p className='text-lg text-neutral-500'>{printAmountTodos()}</p>
+      </div>
+      <Link className="p-4 rounded-full bg-neutral-100" to={'/settings'}>
+      <Settings/>
+      </Link>
+      
     </header>
-  )
-}
+  );
+};
 
